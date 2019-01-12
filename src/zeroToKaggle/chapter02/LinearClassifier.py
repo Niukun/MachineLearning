@@ -43,7 +43,7 @@ from sklearn.linear_model import LogisticRegression,SGDClassifier
 # 标准化数据，保证每个维度的特征数据方差为1，均值为0。使得预测结果不会被某些维度过大的特征值主导
 ss = StandardScaler()
 X_train = ss.fit_transform(X_train)
-X_test = ss.fit_transform(X_test)
+X_test = ss.transform(X_test)
 
 # 初始化LogisticRegrassion和SGDClassifier
 lr = LogisticRegression()
@@ -51,7 +51,7 @@ sgdc = SGDClassifier()
 
 # 调用LogisticRegression中的fit函数来训练模型参数
 lr.fit(X_train,y_train)
-# 使用训练好的迷行lr对X_test进行预测，结果存储在变量lr_y_predict中
+# 使用训练好的模型lr对X_test进行预测，结果存储在变量lr_y_predict中
 lr_y_predict = lr.predict(X_test)
 
 # 调用SGDClaccifier中的fit函数用来训练模型参数
