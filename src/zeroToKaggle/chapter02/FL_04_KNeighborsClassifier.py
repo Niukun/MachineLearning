@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 
+#使用KNeighborsClassifier进行分类
+
 from sklearn.datasets import load_iris
 iris = load_iris()
 

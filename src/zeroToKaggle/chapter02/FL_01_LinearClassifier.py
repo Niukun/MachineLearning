@@ -1,6 +1,8 @@
 # -*- coding: UTF-8 -*-
 import pandas as pd
 import numpy as np
+#使用LogisticRegression和SGDClassifier
+
 ####################### 数据准备#######################
 #创建特征列表
 column_names = ['Sample code number',
